@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "5001:5001"
+    environment:
+      - MONGO_URI=mongodb+srv://badaravikiranreddy23_db_user:ravi@cluster0.l7tpbjh.mongodb.net/?appName=Cluster0
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3001:3001"
+    environment:
+      - PORT=3001
+      - WDS_SOCKET_PORT=0 # Fixes CRA overlay issues in some Docker setups
+    stdin_open: true # Required for CRA
+    tty: true        # Required for CRA
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
