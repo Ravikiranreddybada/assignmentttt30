@@ -1,10 +1,4 @@
-# Lab 27: Full-Stack MERN Application
-
-A professional full-stack application demonstrating modern web development practices, including microservices architecture, Docker containerization, and automated CI/CD pipelines with Jenkins.
-
-## 🚀 Overview
-
-This project consists of a React-based frontend and a Node.js/Express backend, designed to showcase advanced database relationships (One-to-Many and Many-to-Many) using MongoDB Atlas.
+Lab 27: Full-Stack MERN Application
 
 ### Key Features
 - **User Management**: Complete CRUD operations for user profiles.
@@ -13,8 +7,6 @@ This project consists of a React-based frontend and a Node.js/Express backend, d
   - **Many-to-Many**: Students can enroll in multiple courses, and courses can have multiple students.
 - **Dockerized Environment**: Fully containerized using Docker and Docker Compose for consistent development and deployment.
 - **CI/CD Pipeline**: Automated build, test, and containerization using Jenkins.
-
----
 
 ## 🛠 Tech Stack
 
@@ -34,27 +26,6 @@ This project consists of a React-based frontend and a Node.js/Express backend, d
 - **CI/CD**: Jenkins (with custom Docker-in-Docker agent)
 - **Version Control**: Git / GitHub
 
----
-
-## 📦 Project Structure
-
-```text
-.
-├── backend/            # Express API service
-│   ├── models/         # Mongoose schemas (User, Post, Student, Course)
-│   ├── routes/         # API endpoints
-│   └── Dockerfile      # Backend container config
-├── frontend/           # React application
-│   ├── src/            # Components and logic
-│   └── Dockerfile      # Frontend container config
-├── jenkins/            # CI/CD Infrastructure
-│   ├── Dockerfile      # Custom Jenkins image (Node + Docker CLI)
-│   └── docker-compose  # Jenkins instance setup
-├── Jenkinsfile         # CI/CD Pipeline definition
-└── docker-compose.yml  # Root orchestration for app services
-```
-
----
 
 ## 🚦 Getting Started
 
